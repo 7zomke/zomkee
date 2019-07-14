@@ -39,7 +39,10 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
- mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true});
+ // mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true});
+// mongodb+srv://<username>:<password>@yelpcamp-peccl.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://zomke:041099@yelpcamp-peccl.mongodb.net/test?retryWrites=true&w=majority");
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
