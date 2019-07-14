@@ -76,7 +76,7 @@ app.use("/", indexRoutes);
 // 	];
 
 /////////////////////////////////////////
-var port = 3000 || process.env.PORT;
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log("yelpCamp Server started!");
+    console.log("Server Has Started!");
 });
