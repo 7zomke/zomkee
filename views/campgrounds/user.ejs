@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+ 
+<h1>
+	hello there
+</h1>
+<h1>
+	hi <%= currentUser.username %>
+	<% comment.forEach(function(comment){ %>
+	<div>
+		
+	<%if( comment.author.username === currentUser.username) {%>
+		 <%= comment.text %>
+		<%}%>
+
+		</div>
+		<% }); %>
+	
+	
+</h1>

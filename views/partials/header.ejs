@@ -19,7 +19,9 @@
                      <% } else { %> 
                         <li><a href="#">Signed In As <%= currentUser.username %></a></li>
                         <li><a href="/logout">Logout</a></li>
+                        <li><a href="/profile"><%= currentUser.username %> profile</a></li>
                      <% } %>
+					</form>
                 </ul>
             </div>
         </div>
